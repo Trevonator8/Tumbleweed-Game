@@ -1,14 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://qgut3na86a3o"]
+[gd_scene load_steps=7 format=3 uid="uid://qgut3na86a3o"]
+
+[ext_resource type="PackedScene" uid="uid://dm1n6tywb1tbx" path="res://tumbleweedmodel.glb" id="1_jwjdo"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rp2sr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbsm8"]
+cull_mode = 2
+albedo_color = Color(0.791734, 0.575825, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_coy2e"]
+cull_mode = 2
+albedo_color = Color(0.665264, 0.481884, 5.77569e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0r7te"]
+cull_mode = 2
+albedo_color = Color(0.504267, 0.361877, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcvpg"]
+cull_mode = 2
+albedo_color = Color(0.437955, 0.312448, 0, 1)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("PlaneMesh_rp2sr")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.941582, 0.336783, 0, -0.336783, 0.941582, 0, 1.2588, 2.66014)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.898058, 0.439876, 0, -0.439876, 0.898058, 0, 1.46837, 2.72353)
+
+[node name="tumbleweedmodel" parent="." instance=ExtResource("1_jwjdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Sphere" parent="tumbleweedmodel" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_hbsm8")
+
+[node name="Sphere_001" parent="tumbleweedmodel" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_coy2e")
+
+[node name="Sphere_002" parent="tumbleweedmodel" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_0r7te")
+
+[node name="Sphere_003" parent="tumbleweedmodel" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_vcvpg")
+
+[editable path="tumbleweedmodel"]
