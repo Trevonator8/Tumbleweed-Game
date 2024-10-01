@@ -1,0 +1,6 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1727289345
+game.tscn::PackedScene::1136657525453979022::1727208681::0::1::::<><>::
+icon.svg::CompressedTexture2D::6489171195553693107::1727208681::1727208737::1::::<><>::
+TitleScreen.gd::GDScript::-1::1727208681::0::1::::<>Control<>::
+title_screen.tscn::PackedScene::690457023288979858::1727210353::0::1::::<><>::res://TitleScreen.gd

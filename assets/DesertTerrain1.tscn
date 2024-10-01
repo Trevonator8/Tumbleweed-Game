@@ -1,0 +1,50 @@
+[gd_scene load_steps=12 format=3 uid="uid://cahikupl0n21t"]
+
+[ext_resource type="Shader" path="res://Terrain1.gdshader" id="1_ksfxv"]
+[ext_resource type="Texture2D" uid="uid://c7ew6w7rwdj81" path="res://Ground031_4K-JPG/Ground031_4K-JPG_Color.jpg" id="2_u4uff"]
+[ext_resource type="Texture2D" uid="uid://5k7eay5g68i5" path="res://Ground033_4K-JPG/Ground033_4K-JPG_Color.jpg" id="3_u3ift"]
+[ext_resource type="Texture2D" uid="uid://cn5bds7vme786" path="res://Ground031_4K-JPG/Ground031_4K-JPG_NormalDX.jpg" id="4_4ur5u"]
+[ext_resource type="Texture2D" uid="uid://bcyxp75um4286" path="res://Ground033_4K-JPG/Ground033_4K-JPG_NormalDX.jpg" id="5_cl1rj"]
+[ext_resource type="Texture2D" uid="uid://dbt0f55q7iwuu" path="res://Ground031_4K-JPG/Ground031_4K-JPG_Roughness.jpg" id="6_ixexs"]
+[ext_resource type="Texture2D" uid="uid://c5ei40hpvjknq" path="res://Ground033_4K-JPG/Ground033_4K-JPG_Roughness.jpg" id="7_jsfgj"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ymqc7"]
+frequency = 0.0164
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hkn71"]
+width = 1024
+height = 1024
+seamless = true
+noise = SubResource("FastNoiseLite_ymqc7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvi8d"]
+render_priority = 0
+shader = ExtResource("1_ksfxv")
+shader_parameter/cut_factor = 0.3
+shader_parameter/border = 0.017
+shader_parameter/height = 0.108
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_hkn71")
+shader_parameter/albedo_1 = ExtResource("2_u4uff")
+shader_parameter/normalmap_1 = ExtResource("4_4ur5u")
+shader_parameter/roughness_1 = ExtResource("6_ixexs")
+shader_parameter/albedo_2 = ExtResource("3_u3ift")
+shader_parameter/normalmap_2 = ExtResource("5_cl1rj")
+shader_parameter/roughness_2 = ExtResource("7_jsfgj")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8p3l"]
+material = SubResource("ShaderMaterial_lvi8d")
+size = Vector2(50, 50)
+subdivide_width = 100
+subdivide_depth = 100
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Terrain" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_d8p3l")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.845262, 0.534352, 0, -0.534352, 0.845262, 0, 18.2176, 28.2481)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 37.2754, 0)
