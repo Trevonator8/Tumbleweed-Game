@@ -1,8 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://j3pyxumhcapu"]
+[gd_scene load_steps=11 format=3 uid="uid://j3pyxumhcapu"]
 
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_jpb0o"]
+[ext_resource type="PackedScene" uid="uid://cahikupl0n21t" path="res://Scenes/DesertTerrain1.tscn" id="2_8eth4"]
+[ext_resource type="Shader" path="res://SkyShader.gdshader" id="3_2ftjj"]
+[ext_resource type="PackedScene" uid="uid://dmuib1shrstlq" path="res://Models/Cactus1.blend" id="4_we75o"]
+[ext_resource type="FontFile" uid="uid://df51vpd4jgbnn" path="res://Fonts/BrownieStencil-8O8MJ.ttf" id="5_1ixmw"]
 
 [sub_resource type="Theme" id="Theme_45oih"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fb443"]
+shader = ExtResource("3_2ftjj")
+shader_parameter/skyColor = Color(5.58317e-06, 0.724007, 0.833157, 1)
+shader_parameter/horizonColor = Color(1.92523e-07, 0.518036, 0.595774, 1)
+
+[sub_resource type="Sky" id="Sky_nxrvd"]
+sky_material = SubResource("ShaderMaterial_fb443")
+
+[sub_resource type="Environment" id="Environment_f7hmb"]
+background_mode = 2
+sky = SubResource("Sky_nxrvd")
+ambient_light_source = 1
+
+[sub_resource type="FontVariation" id="FontVariation_aovhh"]
+base_font = ExtResource("5_1ixmw")
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -15,20 +35,79 @@ theme = SubResource("Theme_45oih")
 script = ExtResource("1_jpb0o")
 
 [node name="Start" type="Button" parent="."]
+z_index = 10
+z_as_relative = false
 layout_mode = 0
 offset_left = 462.0
 offset_top = 267.0
 offset_right = 634.0
 offset_bottom = 347.0
+theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
+theme_override_fonts/font = ExtResource("5_1ixmw")
+theme_override_font_sizes/font_size = 30
 text = "Start"
+flat = true
 
 [node name="Quit" type="Button" parent="."]
+z_index = 10
+z_as_relative = false
 layout_mode = 0
 offset_left = 462.0
 offset_top = 370.0
 offset_right = 634.0
 offset_bottom = 450.0
+theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
+theme_override_fonts/font = ExtResource("5_1ixmw")
+theme_override_font_sizes/font_size = 30
 text = "Quit"
+flat = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.988649, 0.074594, -0.130417, -0.150022, -0.443052, 0.883854, 0.00814853, 0.893387, 0.449214, 0, 70.5242, 182.52)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202, 2.58556, -5.574)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_f7hmb")
+
+[node name="Node3D" parent="." instance=ExtResource("2_8eth4")]
+
+[node name="Cactus1" parent="." instance=ExtResource("4_we75o")]
+transform = Transform3D(0.487505, 0, 0.111081, 0, 0.5, 0, -0.111081, 0, 0.487505, -4.33601, 1.30944, -12.4781)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 117.0
+offset_right = 225.0
+offset_bottom = 225.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.795368, 0.715129, 0.313044, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_aovhh")
+theme_override_font_sizes/font_size = 80
+text = "Tumble"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -250.0
+offset_right = 174.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
