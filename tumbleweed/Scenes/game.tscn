@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://qgut3na86a3o"]
+[gd_scene load_steps=6 format=3 uid="uid://qgut3na86a3o"]
+
+[ext_resource type="Shader" path="res://SkyShader.gdshader" id="1_5ilda"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rp2sr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_evoo4"]
+shader = ExtResource("1_5ilda")
+shader_parameter/skyColor = Color(5.58317e-06, 0.724007, 0.833157, 1)
+shader_parameter/horizonColor = Color(1.92523e-07, 0.518036, 0.595774, 1)
+
+[sub_resource type="Sky" id="Sky_nxrvd"]
+sky_material = SubResource("ShaderMaterial_evoo4")
+
+[sub_resource type="Environment" id="Environment_jsscu"]
+background_mode = 2
+sky = SubResource("Sky_nxrvd")
+ambient_light_source = 1
 
 [node name="Node3D" type="Node3D"]
 
@@ -12,3 +27,6 @@ transform = Transform3D(1, 0, 0, 0, 0.941582, 0.336783, 0, -0.336783, 0.941582, 
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.898058, 0.439876, 0, -0.439876, 0.898058, 0, 1.46837, 2.72353)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jsscu")
