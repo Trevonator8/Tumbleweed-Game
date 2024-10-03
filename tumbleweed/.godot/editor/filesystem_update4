@@ -1,3 +1,6 @@
-res://title_screen.tscn
-res://SkyShader.gdshader
 res://Scenes/game.tscn
+res://SkyShader.gdshader
+res://Terrain1.gdshader
+res://Scenes/floor.gdshader
+res://Scenes/DesertTerrain1.tscn
+res://Models/tumbleweedmodelscript.gd
