@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdoos25yii5mf"]
+
+[ext_resource type="Script" path="res://cactus_instance.gd" id="1_0wwy5"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cwx3j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l11eb"]
+albedo_color = Color(5.43877e-06, 0.613, 0.151731, 1)
+
+[node name="CactusInstance" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.366, -99.085)
+script = ExtResource("1_0wwy5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_cwx3j")
+surface_material_override/0 = SubResource("StandardMaterial3D_l11eb")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cikb4upcy03ht"]
+
+[ext_resource type="Script" path="res://flower_instance.gd" id="1_46htp"]
+[ext_resource type="PackedScene" uid="uid://bjlcv6m0k6i8s" path="res://Models/flower.glb" id="1_u5mi7"]
+
+[node name="FlowerInstance" type="Node3D"]
+script = ExtResource("1_46htp")
+
+[node name="flower" parent="." instance=ExtResource("1_u5mi7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+
+[editable path="flower"]
