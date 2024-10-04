@@ -35,5 +35,4 @@ func _process(delta: float) -> void:
 	transform.basis = Basis(Vector3(0,0,1),deg_to_rad(-rollScaler * velocityRot.x)) * transform.basis
 	transform.basis = Basis(Vector3(1,0,0),deg_to_rad(rollScaler * velocityRot.z)) * transform.basis
 	transform.basis = transform.basis.orthonormalized()
-	#transform.basis = transform.basis*0.5 #scale
 	scale = Vector3(0.5, 0.5, 0.5)

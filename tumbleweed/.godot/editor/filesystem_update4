@@ -4,3 +4,9 @@ res://Terrain1.gdshader
 res://Scenes/floor.gdshader
 res://Scenes/DesertTerrain1.tscn
 res://Models/tumbleweedmodelscript.gd
+res://Scenes/game.gd
+res://flower_instance.tscn
+res://cactus_instance.tscn
+res://cactus_instance.gd
+res://flower_instance.gd
+res://Scenes/score_label.gd

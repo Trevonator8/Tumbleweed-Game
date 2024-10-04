@@ -1,13 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://qgut3na86a3o"]
+[gd_scene load_steps=20 format=3 uid="uid://qgut3na86a3o"]
 
 [ext_resource type="Shader" path="res://SkyShader.gdshader" id="1_5ilda"]
-[ext_resource type="PackedScene" uid="uid://bjlcv6m0k6i8s" path="res://Models/flower.glb" id="2_mpkto"]
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_ih5r3"]
 [ext_resource type="PackedScene" uid="uid://c0tcogn2qo2xx" path="res://Models/tumbleweedmodel.glb" id="3_4kruy"]
 [ext_resource type="Script" path="res://Models/tumbleweedmodelscript.gd" id="4_krom8"]
 [ext_resource type="Shader" path="res://Scenes/floor.gdshader" id="4_ummio"]
 [ext_resource type="Texture2D" uid="uid://5k7eay5g68i5" path="res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Color.jpg" id="5_cxdwv"]
 [ext_resource type="Texture2D" uid="uid://bl08ft37f74wi" path="res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_NormalGL.jpg" id="6_1mdqa"]
 [ext_resource type="Texture2D" uid="uid://c5ei40hpvjknq" path="res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Roughness.jpg" id="7_hd25g"]
+[ext_resource type="Script" path="res://Scenes/score_label.gd" id="10_7rknc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_evoo4"]
 shader = ExtResource("1_5ilda")
@@ -47,7 +48,11 @@ shader_parameter/floor_color = ExtResource("5_cxdwv")
 shader_parameter/floor_normal = ExtResource("6_1mdqa")
 shader_parameter/floor_rough = ExtResource("7_hd25g")
 
+[sub_resource type="LabelSettings" id="LabelSettings_r1ipp"]
+font_size = 36
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_ih5r3")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.941582, 0.336783, 0, -0.336783, 0.941582, 0, 2.49709, 5.56867)
@@ -57,9 +62,6 @@ transform = Transform3D(0.599317, -0.352126, 0.718906, 0, 0.898058, 0.439876, -0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jsscu")
-
-[node name="flower" parent="." instance=ExtResource("2_mpkto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3605, 0, -3.26039)
 
 [node name="tumbleweedmodel" parent="." instance=ExtResource("3_4kruy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -85,5 +87,21 @@ mesh = SubResource("PlaneMesh_rp2sr")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("ShaderMaterial_y56le")
 
-[editable path="flower"]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 9.0
+offset_right = 1106.0
+offset_bottom = 59.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_r1ipp")
+horizontal_alignment = 2
+script = ExtResource("10_7rknc")
+
 [editable path="tumbleweedmodel"]
