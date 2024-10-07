@@ -23,10 +23,6 @@ background_mode = 2
 sky = SubResource("Sky_nxrvd")
 ambient_light_source = 1
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_tjn4s"]
-margin = 0.02
-radius = 0.003
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hh50p"]
 cull_mode = 2
 albedo_color = Color(0.792157, 0.576471, 0, 1)
@@ -42,6 +38,10 @@ albedo_color = Color(0.528238, 0.379745, 1.92523e-07, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdcn5"]
 cull_mode = 2
 albedo_color = Color(0.433263, 0.308951, 0, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tjn4s"]
+margin = 0.02
+radius = 0.003
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rp2sr"]
 
@@ -71,24 +71,24 @@ environment = SubResource("Environment_jsscu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("4_krom8")
 
+[node name="Sphere" parent="tumbleweedmodel" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_hh50p")
+
+[node name="Sphere_001" parent="tumbleweedmodel" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mjaog")
+
+[node name="Sphere_002" parent="tumbleweedmodel" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7oxng")
+
+[node name="Sphere_003" parent="tumbleweedmodel" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rdcn5")
+
 [node name="TumbleweedBody" type="StaticBody3D" parent="tumbleweedmodel"]
 transform = Transform3D(190, 0, 0, 0, 190, 0, 0, 0, 190, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tumbleweedmodel/TumbleweedBody"]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 shape = SubResource("SphereShape3D_tjn4s")
-
-[node name="Sphere" parent="tumbleweedmodel" index="1"]
-surface_material_override/0 = SubResource("StandardMaterial3D_hh50p")
-
-[node name="Sphere_001" parent="tumbleweedmodel" index="2"]
-surface_material_override/0 = SubResource("StandardMaterial3D_mjaog")
-
-[node name="Sphere_002" parent="tumbleweedmodel" index="3"]
-surface_material_override/0 = SubResource("StandardMaterial3D_7oxng")
-
-[node name="Sphere_003" parent="tumbleweedmodel" index="4"]
-surface_material_override/0 = SubResource("StandardMaterial3D_rdcn5")
 
 [node name="Ground_Node" type="Node3D" parent="."]
 

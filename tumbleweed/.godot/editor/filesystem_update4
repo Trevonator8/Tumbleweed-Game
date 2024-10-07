@@ -2,10 +2,7 @@ res://flower_instance.tscn
 res://SkyShader.gdshader
 res://Scenes/floor.gdshader
 res://Terrain1.gdshader
-res://flower_instance.gd
 res://Scenes/game.tscn
 res://Scenes/DesertTerrain1.tscn
 res://cactus_instance.tscn
 res://title_screen.tscn
-res://collideFlower.gd
-res://Models/tumbleweedmodelscript.gd
