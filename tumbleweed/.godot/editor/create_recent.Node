@@ -1,5 +1,5 @@
-CollisionShape3D
 CollisionPolygon3D
+CollisionShape3D
 RigidBody3D
 Node3D
 Label

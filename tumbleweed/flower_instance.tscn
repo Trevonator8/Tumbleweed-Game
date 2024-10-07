@@ -12,8 +12,17 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 2.2, 0)
 [node name="RigidBody3D" type="RigidBody3D" parent="flower"]
 transform = Transform3D(330, 0, 0, 0, 330, 0, 0, 0, 330, 0, -0.58535, 0)
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="flower/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.007, 0, 0, -0.000109365)
-polygon = PackedVector2Array(-0.00308266, 0.00485289, -0.00346779, 0.00408263, -0.00323671, 0.00385155, -0.00262051, 0.00385155, -0.000309732, -0.00064162, -0.000207033, -0.00495506, 0.000280796, -0.00498074, 0.000383497, -0.000744321, 0.00218077, 0.00297859, 0.0027713, 0.0039029, 0.0033875, 0.00397993, 0.00305373, 0.00487856)
+[node name="TopAndPetals" type="CollisionPolygon3D" parent="flower/RigidBody3D"]
+transform = Transform3D(45, 0, 0, 0, 45, 0, 0, 0, 20, 0, -3.6535, -0.243421)
+top_level = true
+polygon = PackedVector2Array(0.0465255, 0.36003, 0.212936, 0.354988, 0.235628, 0.334817, 0.243192, 0.302039, 0.225543, 0.289432, -0.245953, 0.281868, -0.245953, 0.319688, -0.220739, 0.36003)
+
+[node name="Body1" type="CollisionPolygon3D" parent="flower/RigidBody3D"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.005, 0, 0, 4.57076e-05)
+polygon = PackedVector2Array(-0.256871, 0.384317, 0.25275, 0.389094, 0.216121, 0.314244, -0.226613, 0.315836)
+
+[node name="Body2" type="CollisionPolygon3D" parent="flower/RigidBody3D"]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.004, 0, -0.000364399, -4.00906e-05)
+polygon = PackedVector2Array(-0.2584, 0.387563, 0.25275, 0.389094, 0.216121, 0.314244, -0.226613, 0.315836)
 
 [editable path="flower"]
