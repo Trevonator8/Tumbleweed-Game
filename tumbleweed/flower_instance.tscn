@@ -13,6 +13,7 @@ script = ExtResource("1_46htp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
 
 [node name="Area3D" type="Area3D" parent="flower"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.14302, 0)
 script = ExtResource("3_k8c4o")
 
 [node name="TopAndPetals" type="CollisionPolygon3D" parent="flower/Area3D"]
@@ -46,7 +47,7 @@ depth = 0.4
 polygon = PackedVector2Array(0.0417059, 0.0254842, 0.00404167, -0.0637203, -0.0296578, -0.0676849, -0.0712865, 0.0294489)
 
 [node name="stem" type="CollisionShape3D" parent="flower/Area3D"]
-transform = Transform3D(0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, -1.19717, 0)
+transform = Transform3D(0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, 0.869833, 0)
 shape = SubResource("CylinderShape3D_05mtm")
 
 [connection signal="body_entered" from="flower/Area3D" to="." method="_on_area_3d_body_entered"]
