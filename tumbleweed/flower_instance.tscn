@@ -29,21 +29,21 @@ depth = 0.4
 polygon = PackedVector2Array(-0.102325, 0.28078, -0.0250753, 0.283539, 0.135197, 0.278652, 0.172769, 0.277713, 0.126743, 0.192236, -0.160685, 0.192236, -0.184167, 0.237323, -0.202014, 0.273016)
 
 [node name="bulb2" type="CollisionPolygon3D" parent="flower/Area3D"]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.070358)
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, -0.0669155)
 top_level = true
-depth = 0.4
+depth = 0.28
 polygon = PackedVector2Array(0.128928, 0.193982, 0.0892815, 0.120636, -0.120845, 0.122618, -0.164456, 0.195964)
 
 [node name="bulb3" type="CollisionPolygon3D" parent="flower/Area3D"]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.070358)
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0663495, 1.62727, -0.0955245)
 top_level = true
-depth = 0.4
+depth = 0.2
 polygon = PackedVector2Array(0.0417059, 0.0254842, 0.0892815, 0.120636, -0.120845, 0.122618, -0.0712865, 0.0294489)
 
 [node name="bulb4" type="CollisionPolygon3D" parent="flower/Area3D"]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.070358)
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, -0.0177675)
 top_level = true
-depth = 0.4
+depth = 0.1
 polygon = PackedVector2Array(0.0417059, 0.0254842, 0.00404167, -0.0637203, -0.0296578, -0.0676849, -0.0712865, 0.0294489)
 
 [node name="stem" type="CollisionShape3D" parent="flower/Area3D"]
