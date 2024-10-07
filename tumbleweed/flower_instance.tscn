@@ -1,28 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://cikb4upcy03ht"]
+[gd_scene load_steps=5 format=3 uid="uid://cikb4upcy03ht"]
 
 [ext_resource type="Script" path="res://flower_instance.gd" id="1_46htp"]
 [ext_resource type="PackedScene" uid="uid://bjlcv6m0k6i8s" path="res://Models/flower.glb" id="1_u5mi7"]
+[ext_resource type="Script" path="res://collideFlower.gd" id="3_k8c4o"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_05mtm"]
 
 [node name="FlowerInstance" type="Node3D"]
 script = ExtResource("1_46htp")
 
 [node name="flower" parent="." instance=ExtResource("1_u5mi7")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 2.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="flower"]
-transform = Transform3D(330, 0, 0, 0, 330, 0, 0, 0, 330, 0, -0.58535, 0)
+[node name="Area3D" type="Area3D" parent="flower"]
+script = ExtResource("3_k8c4o")
 
-[node name="TopAndPetals" type="CollisionPolygon3D" parent="flower/RigidBody3D"]
-transform = Transform3D(45, 0, 0, 0, 45, 0, 0, 0, 20, 0, -3.6535, -0.243421)
+[node name="TopAndPetals" type="CollisionPolygon3D" parent="flower/Area3D"]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.0406389)
 top_level = true
+depth = 0.5
 polygon = PackedVector2Array(0.0465255, 0.36003, 0.212936, 0.354988, 0.235628, 0.334817, 0.243192, 0.302039, 0.225543, 0.289432, -0.245953, 0.281868, -0.245953, 0.319688, -0.220739, 0.36003)
 
-[node name="Body1" type="CollisionPolygon3D" parent="flower/RigidBody3D"]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.005, 0, 0, 4.57076e-05)
-polygon = PackedVector2Array(-0.256871, 0.384317, 0.25275, 0.389094, 0.216121, 0.314244, -0.226613, 0.315836)
+[node name="bulb1" type="CollisionPolygon3D" parent="flower/Area3D"]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.070358)
+top_level = true
+depth = 0.4
+polygon = PackedVector2Array(-0.102325, 0.28078, -0.0250753, 0.283539, 0.135197, 0.278652, 0.172769, 0.277713, 0.126743, 0.192236, -0.160685, 0.192236, -0.184167, 0.237323, -0.202014, 0.273016)
 
-[node name="Body2" type="CollisionPolygon3D" parent="flower/RigidBody3D"]
-transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.004, 0, -0.000364399, -4.00906e-05)
-polygon = PackedVector2Array(-0.2584, 0.387563, 0.25275, 0.389094, 0.216121, 0.314244, -0.226613, 0.315836)
+[node name="bulb2" type="CollisionPolygon3D" parent="flower/Area3D"]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.070358)
+top_level = true
+depth = 0.4
+polygon = PackedVector2Array(0.128928, 0.193982, 0.0892815, 0.120636, -0.120845, 0.122618, -0.164456, 0.195964)
+
+[node name="bulb3" type="CollisionPolygon3D" parent="flower/Area3D"]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.070358)
+top_level = true
+depth = 0.4
+polygon = PackedVector2Array(0.0417059, 0.0254842, 0.0892815, 0.120636, -0.120845, 0.122618, -0.0712865, 0.0294489)
+
+[node name="bulb4" type="CollisionPolygon3D" parent="flower/Area3D"]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.0662434, 1.62727, 0.070358)
+top_level = true
+depth = 0.4
+polygon = PackedVector2Array(0.0417059, 0.0254842, 0.00404167, -0.0637203, -0.0296578, -0.0676849, -0.0712865, 0.0294489)
+
+[node name="stem" type="CollisionShape3D" parent="flower/Area3D"]
+transform = Transform3D(0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, -1.19717, 0)
+shape = SubResource("CylinderShape3D_05mtm")
+
+[connection signal="body_entered" from="flower/Area3D" to="." method="_on_area_3d_body_entered"]
 
 [editable path="flower"]

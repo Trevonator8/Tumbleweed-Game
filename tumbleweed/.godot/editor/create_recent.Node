@@ -1,10 +1,12 @@
-CollisionPolygon3D
 CollisionShape3D
+CollisionPolygon3D
+Area3D
+MeshInstance3D
 RigidBody3D
+StaticBody3D
 Node3D
 Label
 Control
-MeshInstance3D
 Panel
 WorldEnvironment
 Camera3D
