@@ -5,7 +5,7 @@ var cacti_node = preload("res://cactus_instance.tscn")
 var cactiClock = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	inst_cacti(randf_range(-4, 4))
+	inst_cacti(randf_range(-3.5, 3.5))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

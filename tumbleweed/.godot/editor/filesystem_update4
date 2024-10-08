@@ -1,8 +1,11 @@
-res://title_screen.tscn
+res://cactus_instance.tscn
 res://SkyShader.gdshader
 res://Scenes/floor.gdshader
 res://Terrain1.gdshader
 res://Scenes/game.tscn
 res://Scenes/DesertTerrain1.tscn
 res://flower_instance.tscn
-res://cactus_instance.tscn
+res://title_screen.tscn
+res://cactus_instance.gd
+res://Scenes/game.gd
+res://flower_instance.gd
