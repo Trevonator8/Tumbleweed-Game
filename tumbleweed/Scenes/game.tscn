@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://qgut3na86a3o"]
+[gd_scene load_steps=21 format=3 uid="uid://qgut3na86a3o"]
 
 [ext_resource type="Shader" path="res://SkyShader.gdshader" id="1_5ilda"]
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_ih5r3"]
@@ -39,6 +39,10 @@ albedo_color = Color(0.528238, 0.379745, 1.92523e-07, 1)
 cull_mode = 2
 albedo_color = Color(0.433263, 0.308951, 0, 1)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_tjn4s"]
+margin = 0.02
+radius = 0.003
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_rp2sr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y56le"]
@@ -63,7 +67,7 @@ transform = Transform3D(0.599317, -0.352126, 0.718906, 0, 0.898058, 0.439876, -0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jsscu")
 
-[node name="tumbleweedmodel" parent="." instance=ExtResource("3_4kruy")]
+[node name="tumbleweedmodel" parent="." groups=["Violence"] instance=ExtResource("3_4kruy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("4_krom8")
 
@@ -78,6 +82,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7oxng")
 
 [node name="Sphere_003" parent="tumbleweedmodel" index="3"]
 surface_material_override/0 = SubResource("StandardMaterial3D_rdcn5")
+
+[node name="TumbleweedBody" type="StaticBody3D" parent="tumbleweedmodel"]
+transform = Transform3D(190, 0, 0, 0, 190, 0, 0, 0, 190, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tumbleweedmodel/TumbleweedBody"]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
+shape = SubResource("SphereShape3D_tjn4s")
 
 [node name="Ground_Node" type="Node3D" parent="."]
 

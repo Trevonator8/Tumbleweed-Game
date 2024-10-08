@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 		velocityRot[0] += -0.2 * delta
 	velocity.y += -0.05*delta
 	
-	
 	transform.origin += velocity
 	if (transform.origin.x > 3.0):
 		transform.origin.x = 3
