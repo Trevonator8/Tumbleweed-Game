@@ -14,7 +14,7 @@ func initialize(pos, rot):
 	position += pos
 	transform.basis = Basis(Vector3(0,0,1),rot) * transform.basis
 	transform.basis = transform.basis.orthonormalized()
-	scale = Vector3(0.5, 0.5, 0.5)
+	scale = Vector3(0.8, 0.8, 0.8)
 
 func _on_area_3d_body_entered(body) -> void:
 	print("Collided with: ", body.name)
