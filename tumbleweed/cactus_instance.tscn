@@ -43,7 +43,6 @@ transform = Transform3D(0.311461, -0.339432, 0, 0.339432, 0.311461, 0, 0, 0, 0.4
 shape = SubResource("ConcavePolygonShape3D_57bpb")
 
 [node name="Cactus3" parent="." instance=ExtResource("3_fmbu0")]
-visible = false
 
 [node name="Area3D" type="Area3D" parent="Cactus3"]
 script = ExtResource("5_bjqib")
@@ -52,7 +51,6 @@ script = ExtResource("5_bjqib")
 shape = SubResource("ConcavePolygonShape3D_a3fi2")
 
 [node name="Cactus4" parent="." instance=ExtResource("4_lsg31")]
-visible = false
 
 [node name="Area3D" type="Area3D" parent="Cactus4"]
 script = ExtResource("5_bjqib")
@@ -62,7 +60,6 @@ transform = Transform3D(-0.12537, 0.41615, 0, -0.41615, -0.12537, 0, 0, 0, 0.434
 shape = SubResource("ConcavePolygonShape3D_kyxph")
 
 [node name="Cactus5" parent="." instance=ExtResource("5_yhxtq")]
-visible = false
 
 [node name="Area3D" type="Area3D" parent="Cactus5"]
 script = ExtResource("5_bjqib")
