@@ -2,9 +2,13 @@ extends Node3D
 
 var velocity : Vector3 = Vector3(0, 0.045, 0)
 var velocityRot : Vector3 = Vector3(0, 0, -0.03)
+var is_paused = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if is_paused:
+		return
+	
 	var rollScaler = 100
 	transform.basis = Basis(Vector3(0,0,1),deg_to_rad(-rollScaler * velocityRot.x)) * transform.basis
 	transform.basis = Basis(Vector3(1,0,0),deg_to_rad(rollScaler * velocityRot.z)) * transform.basis

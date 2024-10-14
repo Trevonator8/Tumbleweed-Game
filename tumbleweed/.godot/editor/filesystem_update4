@@ -1,11 +1,12 @@
-res://cactus_instance.tscn
 res://SkyShader.gdshader
 res://Scenes/floor.gdshader
 res://Terrain1.gdshader
-res://collide.gd
+res://Scenes/pause_menu.tscn
+res://Scenes/game.gd
+res://Scenes/pause_menu.gd
+res://Scenes/title_screen.tscn
 res://Scenes/game.tscn
 res://Scenes/DesertTerrain1.tscn
 res://flower_instance.tscn
-res://title_screen.tscn
-res://collideCactus.gd
-res://collideFlower.gd
+res://cactus_instance.tscn
+res://Models/tumbleweedmodelscript.gd
