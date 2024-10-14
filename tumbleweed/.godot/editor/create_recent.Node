@@ -1,3 +1,7 @@
+Label
+Button
+VBoxContainer
+MarginContainer
 CollisionShape3D
 CollisionPolygon3D
 Area3D
@@ -5,10 +9,6 @@ MeshInstance3D
 RigidBody3D
 StaticBody3D
 Node3D
-Label
 Control
 Panel
 WorldEnvironment
-Camera3D
-DirectionalLight3D
-OmniLight3D

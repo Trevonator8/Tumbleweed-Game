@@ -1,16 +1,16 @@
 [gd_scene load_steps=30 format=4 uid="uid://j3pyxumhcapu"]
 
-[ext_resource type="Script" path="res://TitleScreen.gd" id="1_jpb0o"]
-[ext_resource type="PackedScene" uid="uid://cahikupl0n21t" path="res://Scenes/DesertTerrain1.tscn" id="2_8eth4"]
-[ext_resource type="Shader" path="res://SkyShader.gdshader" id="3_2ftjj"]
-[ext_resource type="FontFile" uid="uid://df51vpd4jgbnn" path="res://Fonts/BrownieStencil-8O8MJ.ttf" id="5_1ixmw"]
-[ext_resource type="ArrayMesh" uid="uid://gm7j66q4usw3" path="res://Models/Cactus1.obj" id="5_c5v2x"]
-[ext_resource type="ArrayMesh" uid="uid://bghnt232k8r45" path="res://Models/flower.obj" id="6_5jbni"]
+[ext_resource type="Script" path="res://Scenes/TitleScreen.gd" id="1_15hp5"]
+[ext_resource type="FontFile" uid="uid://df51vpd4jgbnn" path="res://Fonts/BrownieStencil-8O8MJ.ttf" id="2_3otvd"]
+[ext_resource type="Shader" path="res://SkyShader.gdshader" id="3_jpv57"]
+[ext_resource type="PackedScene" uid="uid://cahikupl0n21t" path="res://Scenes/DesertTerrain1.tscn" id="4_g1t0q"]
+[ext_resource type="ArrayMesh" uid="uid://gm7j66q4usw3" path="res://Models/Cactus1.obj" id="5_b31cq"]
+[ext_resource type="ArrayMesh" uid="uid://bghnt232k8r45" path="res://Models/flower.obj" id="6_pamcf"]
 
 [sub_resource type="Theme" id="Theme_45oih"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fb443"]
-shader = ExtResource("3_2ftjj")
+shader = ExtResource("3_jpv57")
 shader_parameter/skyColor = Color(5.58317e-06, 0.724007, 0.833157, 1)
 shader_parameter/horizonColor = Color(1.92523e-07, 0.518036, 0.595774, 1)
 
@@ -23,7 +23,7 @@ sky = SubResource("Sky_nxrvd")
 ambient_light_source = 1
 
 [sub_resource type="FontVariation" id="FontVariation_aovhh"]
-base_font = ExtResource("5_1ixmw")
+base_font = ExtResource("2_3otvd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgtt2"]
 albedo_color = Color(0, 0, 0, 1)
@@ -192,7 +192,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_45oih")
-script = ExtResource("1_jpb0o")
+script = ExtResource("1_15hp5")
 
 [node name="Start" type="Button" parent="."]
 z_index = 10
@@ -210,7 +210,7 @@ offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
-theme_override_fonts/font = ExtResource("5_1ixmw")
+theme_override_fonts/font = ExtResource("2_3otvd")
 theme_override_font_sizes/font_size = 30
 text = "Start"
 flat = true
@@ -231,7 +231,7 @@ offset_bottom = 109.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
-theme_override_fonts/font = ExtResource("5_1ixmw")
+theme_override_fonts/font = ExtResource("2_3otvd")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 flat = true
@@ -245,7 +245,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202, 2.58556, -5.574)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f7hmb")
 
-[node name="Node3D" parent="." instance=ExtResource("2_8eth4")]
+[node name="Node3D" parent="." instance=ExtResource("4_g1t0q")]
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -285,12 +285,12 @@ mouse_filter = 2
 
 [node name="Cactus2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.473884, 0, 0.15948, 0, 0.5, 0, -0.15948, 0, 0.473884, -4.336, 1.309, -12.478)
-mesh = ExtResource("5_c5v2x")
+mesh = ExtResource("5_b31cq")
 surface_material_override/1 = SubResource("StandardMaterial3D_sgtt2")
 
 [node name="Flower" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.59951, 2.04643, -10.5619)
-mesh = ExtResource("6_5jbni")
+mesh = ExtResource("6_pamcf")
 surface_material_override/0 = SubResource("StandardMaterial3D_qo3q5")
 
 [node name="Tumbleweed" type="Node3D" parent="."]

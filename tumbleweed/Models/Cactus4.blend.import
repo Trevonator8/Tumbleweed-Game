@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5mpfca6mfthj"
-valid=false
+path="res://.godot/imported/Cactus4.blend-bc61aa3b790490580285e7aca8b1587f.scn"
 
 [deps]
 
 source_file="res://Models/Cactus4.blend"
+dest_files=["res://.godot/imported/Cactus4.blend-bc61aa3b790490580285e7aca8b1587f.scn"]
 
 [params]
 
