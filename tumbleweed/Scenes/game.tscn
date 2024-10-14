@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://qgut3na86a3o"]
+[gd_scene load_steps=23 format=3 uid="uid://qgut3na86a3o"]
 
 [ext_resource type="Shader" path="res://SkyShader.gdshader" id="1_5ilda"]
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_ih5r3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c5ei40hpvjknq" path="res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Roughness.jpg" id="7_hd25g"]
 [ext_resource type="Script" path="res://Scenes/score_label.gd" id="10_7rknc"]
 [ext_resource type="PackedScene" uid="uid://ctysgi2gko8me" path="res://Scenes/pause_menu.tscn" id="10_e2fk4"]
+[ext_resource type="PackedScene" uid="uid://cl5gqrrti53qi" path="res://Scenes/game_over_menu.tscn" id="11_r4pbg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_evoo4"]
 shader = ExtResource("1_5ilda")
@@ -117,5 +118,7 @@ horizontal_alignment = 2
 script = ExtResource("10_7rknc")
 
 [node name="PauseMenu" parent="." instance=ExtResource("10_e2fk4")]
+
+[node name="GameOverMenu" parent="." instance=ExtResource("11_r4pbg")]
 
 [editable path="tumbleweedmodel"]

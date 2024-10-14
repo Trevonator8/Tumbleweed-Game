@@ -1,5 +1,6 @@
 extends Area3D
 
+@onready var main = $"../../../"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -58,3 +59,4 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	print("body enter")
+	main.gameOver()

@@ -1,7 +1,7 @@
 Label
-Button
 VBoxContainer
 MarginContainer
+Button
 CollisionShape3D
 CollisionPolygon3D
 Area3D
