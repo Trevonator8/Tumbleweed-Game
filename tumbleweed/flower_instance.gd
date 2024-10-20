@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func initialize(pos, rot):
@@ -20,4 +20,5 @@ func _on_area_3d_body_entered(body) -> void:
 	print("Collided with: ", body.name)
 	if body.name == "TumbleweedBody":  # Replace with your tumbleweed's name
 		#$MeshInstance3D.visible = false  # Hides the flower's mesh
+		get_node("../../Control/ScoreLabel")._addScore()
 		queue_free()  # Optionally remove the flower completely

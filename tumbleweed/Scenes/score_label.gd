@@ -10,8 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	cactiClock += delta
-	if cactiClock >= 3:
-		score += 1
-		cactiClock -= 3
-		text = "Score: %s" % score
+	text = "Score: %s" % score
+	
+func _addScore():
+	score += 1;

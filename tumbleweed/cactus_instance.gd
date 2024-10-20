@@ -8,6 +8,7 @@ func _ready() -> void:
 	var randCacti = randi_range(0, 3)
 	if (randCacti == 0):
 		get_node('Cactus2').visible = true
+		get_node('Cactus2/Area3D/CollisionShape3D').disabled = false
 		var randFlower = randi_range(0, 1)
 		if (randFlower == 0):
 			inst_flower(Vector3(3.81, 3.28, 0), PI*randf_range(1.5, 2))
@@ -15,6 +16,7 @@ func _ready() -> void:
 			inst_flower(Vector3(-3.63, 5.85, 0), PI*randf_range(0, 0.5))
 	if (randCacti == 1):
 		get_node('Cactus3').visible = true
+		get_node('Cactus3/Area3D/CollisionShape3D').disabled = false
 		var randFlower = randi_range(0, 1)
 		if (randFlower == 0):
 			inst_flower(Vector3(3.04, 6.61, 0), PI*randf_range(1.5, 2))
@@ -22,6 +24,7 @@ func _ready() -> void:
 			inst_flower(Vector3(-2.53, 3.78, 0), PI*randf_range(0, 0.5))
 	if (randCacti == 2):
 		get_node('Cactus4').visible = true
+		get_node('Cactus4/Area3D/CollisionShape3D').disabled = false
 		var randFlower = randi_range(0, 1)
 		if (randFlower == 0):
 			inst_flower(Vector3(3.75, 4.02, 0), PI*randf_range(1.5, 2))
@@ -29,6 +32,7 @@ func _ready() -> void:
 			inst_flower(Vector3(-3.35, 4.66, 0), PI*randf_range(0, 0.5))
 	if (randCacti == 3):
 		get_node('Cactus5').visible = true
+		get_node('Cactus5/Area3D/CollisionShape3D').disabled = false
 		var randFlower = randi_range(0, 1)
 		if (randFlower == 0):
 			inst_flower(Vector3(3.43, 3.38, 0), PI*randf_range(1.5, 2))
@@ -49,3 +53,7 @@ func inst_flower(pos, rot):
 	var instance = flower_node.instantiate()
 	instance.initialize(pos, rot)
 	add_child(instance)
+
+
+func _on_body_entered(_body: Node3D) -> void:
+	pass # Replace with function body.
