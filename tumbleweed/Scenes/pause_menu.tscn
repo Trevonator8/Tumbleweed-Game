@@ -64,14 +64,13 @@ theme_override_font_sizes/font_size = 26
 text = "Main Menu"
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
 z_index = -1
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
+anchors_preset = -1
+anchor_left = 0.499132
+anchor_top = 0.473765
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.529321
 offset_left = -143.0
 offset_top = -107.0
 offset_right = 144.0
@@ -82,6 +81,7 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="OptionsPanel" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 875.0
 offset_top = 174.0
 offset_right = 1104.0

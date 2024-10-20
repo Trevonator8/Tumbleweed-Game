@@ -1,14 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729454143
+::res://::1729457998
 cactus_instance.gd::GDScript::-1::1729453739::0::1::::<>Node3D<>::
-cactus_instance.tscn::PackedScene::2626772150929130453::1729453739::0::1::::<><>::res://cactus_instance.gd<>uid://b72dlvh6hvcqh::::res://Models/Cactus2.glb<>uid://cg0mjogrycyho::::res://Models/Cactus3.glb<>uid://bplgvl136y46k::::res://Models/Cactus4.glb<>res://collideCactus.gd<>uid://dn3ma7bpgepdg::::res://Models/Cactus5.glb
+cactus_instance.tscn::PackedScene::2626772150929130453::1729457571::0::1::::<><>::res://cactus_instance.gd<>uid://b72dlvh6hvcqh::::res://Models/Cactus2.glb<>uid://cg0mjogrycyho::::res://Models/Cactus3.glb<>uid://bplgvl136y46k::::res://Models/Cactus4.glb<>res://collideCactus.gd<>uid://dn3ma7bpgepdg::::res://Models/Cactus5.glb
 collideCactus.gd::GDScript::-1::1729453739::0::1::::<>Area3D<>::
 collideFlower.gd::GDScript::-1::1729453739::0::1::::<>Area3D<>::
 flower_instance.gd::GDScript::-1::1729453739::0::1::::<>Node3D<>::
-flower_instance.tscn::PackedScene::5355109472810094649::1728944350::0::1::::<><>::res://flower_instance.gd<>uid://bjlcv6m0k6i8s::::res://Models/flower.glb<>res://collideFlower.gd
+flower_instance.tscn::PackedScene::5355109472810094649::1729457571::0::1::::<><>::res://flower_instance.gd<>uid://bjlcv6m0k6i8s::::res://Models/flower.glb<>res://collideFlower.gd
 icon.svg::CompressedTexture2D::6489171195553693107::1728927837::1729453939::1::::<><>::
-SkyShader.gdshader::Shader::-1::1728948746::0::1::::<><>::
-Terrain1.gdshader::Shader::-1::1728948746::0::1::::<><>::
+MusicSettings.gd::GDScript::-1::1729455871::0::1::::<>Node<>::
+SkyShader.gdshader::Shader::-1::1729457961::0::1::::<><>::
+Terrain1.gdshader::Shader::-1::1729457961::0::1::::<><>::
 ::res://Fonts/::1729454143
 BrownieStencil-8O8MJ.ttf::FontFile::7573754539189746411::1728927836::1729453938::1::::<><>::
 ::res://Models/::1729453944
@@ -25,19 +26,19 @@ flower.glb::PackedScene::3040989015299571020::1728927836::1729453942::1::::<><>:
 flower.obj::Mesh::2822829103416285892::1728927836::1729453941::1::::<><>::
 tumbleweedmodel.glb::PackedScene::6566932407235627297::1728927836::1729453942::1::::<><>::
 tumbleweedmodelscript.gd::GDScript::-1::1728927836::0::1::::<>Node3D<>::
-::res://Scenes/::1729453739
+::res://Scenes/::1729457961
 DesertTerrain1.tscn::PackedScene::4787796679718611467::1728944350::0::1::::<><>::res://Terrain1.gdshader<>uid://c7ew6w7rwdj81::::res://Textures/Ground031_4K-JPG/Ground031_4K-JPG_Color.jpg<>uid://5k7eay5g68i5::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Color.jpg<>uid://cn5bds7vme786::::res://Textures/Ground031_4K-JPG/Ground031_4K-JPG_NormalDX.jpg<>uid://bcyxp75um4286::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_NormalDX.jpg<>uid://dbt0f55q7iwuu::::res://Textures/Ground031_4K-JPG/Ground031_4K-JPG_Roughness.jpg<>uid://c5ei40hpvjknq::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Roughness.jpg
-floor.gdshader::Shader::-1::1728948746::0::1::::<><>::
+floor.gdshader::Shader::-1::1729457961::0::1::::<><>::
 game.gd::GDScript::-1::1729021253::0::1::::<>Node3D<>::
-game.tscn::PackedScene::1136657525453979022::1729453739::0::1::::<><>::res://SkyShader.gdshader<>res://Scenes/game.gd<>uid://c0tcogn2qo2xx::::res://Models/tumbleweedmodel.glb<>res://Models/tumbleweedmodelscript.gd<>res://Scenes/floor.gdshader<>uid://5k7eay5g68i5::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Color.jpg<>uid://bl08ft37f74wi::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_NormalGL.jpg<>uid://c5ei40hpvjknq::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Roughness.jpg<>res://Scenes/score_label.gd<>uid://ctysgi2gko8me::::res://Scenes/pause_menu.tscn<>uid://cl5gqrrti53qi::::res://Scenes/game_over_menu.tscn
+game.tscn::PackedScene::1136657525453979022::1729457616::0::1::::<><>::res://SkyShader.gdshader<>res://Scenes/game.gd<>uid://c0tcogn2qo2xx::::res://Models/tumbleweedmodel.glb<>res://Models/tumbleweedmodelscript.gd<>res://Scenes/floor.gdshader<>uid://5k7eay5g68i5::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Color.jpg<>uid://bl08ft37f74wi::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_NormalGL.jpg<>uid://c5ei40hpvjknq::::res://Textures/Ground033_4K-JPG/Ground033_4K-JPG_Roughness.jpg<>res://Scenes/score_label.gd<>uid://ctysgi2gko8me::::res://Scenes/pause_menu.tscn<>uid://cl5gqrrti53qi::::res://Scenes/game_over_menu.tscn<>uid://b3x2vnuyd3pe::::res://Sound/T29_2 (Hell Biome or Desert Maybe).mp3
 game_over_menu.gd::GDScript::-1::1729021253::0::1::::<>Control<>::
-game_over_menu.tscn::PackedScene::5607243774719232040::1729021253::0::1::::<><>::res://Scenes/game_over_menu.gd<>uid://df51vpd4jgbnn::::res://Fonts/BrownieStencil-8O8MJ.ttf
-pause_menu.gd::GDScript::-1::1728927836::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::6157078545422562864::1728948724::0::1::::<><>::uid://df51vpd4jgbnn::::res://Fonts/BrownieStencil-8O8MJ.ttf<>res://Scenes/pause_menu.gd
+game_over_menu.tscn::PackedScene::5607243774719232040::1729457571::0::1::::<><>::res://Scenes/game_over_menu.gd<>uid://df51vpd4jgbnn::::res://Fonts/BrownieStencil-8O8MJ.ttf
+pause_menu.gd::GDScript::-1::1729457569::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::6157078545422562864::1729457960::0::1::::<><>::uid://df51vpd4jgbnn::::res://Fonts/BrownieStencil-8O8MJ.ttf<>res://Scenes/pause_menu.gd
 score_label.gd::GDScript::-1::1729453739::0::1::::<>Label<>::
-TitleScreen.gd::GDScript::-1::1728927836::0::1::::<>Control<>::
-title_screen.tscn::PackedScene::690457023288979858::1728948724::0::1::::<><>::res://Scenes/TitleScreen.gd<>uid://df51vpd4jgbnn::::res://Fonts/BrownieStencil-8O8MJ.ttf<>res://SkyShader.gdshader<>uid://cahikupl0n21t::::res://Scenes/DesertTerrain1.tscn<>uid://gm7j66q4usw3::::res://Models/Cactus1.obj<>uid://bghnt232k8r45::::res://Models/flower.obj
-::res://Sound/::1729454204
+TitleScreen.gd::GDScript::-1::1729456468::0::1::::<>Control<>::
+title_screen.tscn::PackedScene::690457023288979858::1729457571::0::1::::<><>::res://Scenes/TitleScreen.gd<>uid://df51vpd4jgbnn::::res://Fonts/BrownieStencil-8O8MJ.ttf<>res://SkyShader.gdshader<>uid://cahikupl0n21t::::res://Scenes/DesertTerrain1.tscn<>uid://gm7j66q4usw3::::res://Models/Cactus1.obj<>uid://bghnt232k8r45::::res://Models/flower.obj<>uid://cg4tne11ptidp::::res://Sound/T35 (title screen maybe).mp3
+::res://Sound/::1729454220
 T29_2 (Hell Biome or Desert Maybe).mp3::AudioStreamMP3::129437252034508746::1729454220::1729454220::1::::<><>::
 T35 (title screen maybe).mp3::AudioStreamMP3::5255018473725893981::1729454188::1729454188::1::::<><>::
 ::res://Textures/::1728927836
