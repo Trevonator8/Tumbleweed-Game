@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://qgut3na86a3o"]
+[gd_scene load_steps=24 format=3 uid="uid://qgut3na86a3o"]
 
 [ext_resource type="Shader" path="res://SkyShader.gdshader" id="1_5ilda"]
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_ih5r3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scenes/score_label.gd" id="10_7rknc"]
 [ext_resource type="PackedScene" uid="uid://ctysgi2gko8me" path="res://Scenes/pause_menu.tscn" id="10_e2fk4"]
 [ext_resource type="PackedScene" uid="uid://cl5gqrrti53qi" path="res://Scenes/game_over_menu.tscn" id="11_r4pbg"]
+[ext_resource type="AudioStream" uid="uid://b3x2vnuyd3pe" path="res://Sound/T29_2 (Hell Biome or Desert Maybe).mp3" id="12_ubhma"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_evoo4"]
 shader = ExtResource("1_5ilda")
@@ -121,5 +122,12 @@ script = ExtResource("10_7rknc")
 [node name="PauseMenu" parent="." instance=ExtResource("10_e2fk4")]
 
 [node name="GameOverMenu" parent="." instance=ExtResource("11_r4pbg")]
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ubhma")
+volume_db = 2.0
+autoplay = true
+mix_target = 1
+parameters/looping = true
 
 [editable path="tumbleweedmodel"]

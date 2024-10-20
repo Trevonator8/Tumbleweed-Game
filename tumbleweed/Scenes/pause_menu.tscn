@@ -1,9 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctysgi2gko8me"]
+[gd_scene load_steps=5 format=3 uid="uid://ctysgi2gko8me"]
 
 [ext_resource type="FontFile" uid="uid://df51vpd4jgbnn" path="res://Fonts/BrownieStencil-8O8MJ.ttf" id="1_0ytf3"]
 [ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="1_mal3h"]
 
 [sub_resource type="FontVariation" id="FontVariation_3uriu"]
+base_font = ExtResource("1_0ytf3")
+
+[sub_resource type="FontVariation" id="FontVariation_qc8s5"]
 base_font = ExtResource("1_0ytf3")
 
 [node name="PauseMenu" type="Control"]
@@ -48,6 +51,12 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 26
 text = "Resume"
 
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 26
+text = "Options"
+
 [node name="Main Menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -55,6 +64,7 @@ theme_override_font_sizes/font_size = 26
 text = "Main Menu"
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 z_index = -1
 layout_mode = 1
 anchors_preset = 8
@@ -71,5 +81,64 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="OptionsPanel" type="Panel" parent="."]
+offset_left = 875.0
+offset_top = 174.0
+offset_right = 1104.0
+offset_bottom = 494.0
+
+[node name="HSlider" type="HSlider" parent="OptionsPanel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 80.0
+offset_right = 199.0
+offset_bottom = 96.0
+min_value = -80.0
+max_value = 0.0
+value = -10.0
+
+[node name="Label" type="Label" parent="OptionsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.5
+offset_top = -141.0
+offset_right = 137.5
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.795368, 0.715129, 0.313044, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qc8s5")
+theme_override_font_sizes/font_size = 24
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="OptionsPanel"]
+z_index = 10
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = 35.0
+offset_right = 35.5
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
+theme_override_fonts/font = ExtResource("1_0ytf3")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+flat = true
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="OptionsPanel/Back" to="." method="_on_back_pressed"]

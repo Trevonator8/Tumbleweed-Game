@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://j3pyxumhcapu"]
+[gd_scene load_steps=31 format=4 uid="uid://j3pyxumhcapu"]
 
 [ext_resource type="Script" path="res://Scenes/TitleScreen.gd" id="1_15hp5"]
 [ext_resource type="FontFile" uid="uid://df51vpd4jgbnn" path="res://Fonts/BrownieStencil-8O8MJ.ttf" id="2_3otvd"]
@@ -6,8 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cahikupl0n21t" path="res://Scenes/DesertTerrain1.tscn" id="4_g1t0q"]
 [ext_resource type="ArrayMesh" uid="uid://gm7j66q4usw3" path="res://Models/Cactus1.obj" id="5_b31cq"]
 [ext_resource type="ArrayMesh" uid="uid://bghnt232k8r45" path="res://Models/flower.obj" id="6_pamcf"]
+[ext_resource type="AudioStream" uid="uid://cg4tne11ptidp" path="res://Sound/T35 (title screen maybe).mp3" id="7_0ib4f"]
 
 [sub_resource type="Theme" id="Theme_45oih"]
+
+[sub_resource type="FontVariation" id="FontVariation_aovhh"]
+base_font = ExtResource("2_3otvd")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fb443"]
 shader = ExtResource("3_jpv57")
@@ -21,9 +25,6 @@ sky_material = SubResource("ShaderMaterial_fb443")
 background_mode = 2
 sky = SubResource("Sky_nxrvd")
 ambient_light_source = 1
-
-[sub_resource type="FontVariation" id="FontVariation_aovhh"]
-base_font = ExtResource("2_3otvd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgtt2"]
 albedo_color = Color(0, 0, 0, 1)
@@ -215,6 +216,27 @@ theme_override_font_sizes/font_size = 30
 text = "Start"
 flat = true
 
+[node name="Options" type="Button" parent="."]
+z_index = 10
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = 33.0
+offset_right = 43.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
+theme_override_fonts/font = ExtResource("2_3otvd")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+flat = true
+
 [node name="Quit" type="Button" parent="."]
 z_index = 10
 z_as_relative = false
@@ -225,15 +247,73 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -34.0
-offset_top = 35.0
+offset_top = 79.0
 offset_right = 34.0
-offset_bottom = 109.0
+offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
 theme_override_fonts/font = ExtResource("2_3otvd")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
+flat = true
+
+[node name="OptionsPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 174.0
+offset_right = 1104.0
+offset_bottom = 494.0
+
+[node name="HSlider" type="HSlider" parent="OptionsPanel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 80.0
+offset_right = 199.0
+offset_bottom = 96.0
+min_value = -80.0
+max_value = 0.0
+value = -10.0
+
+[node name="Label" type="Label" parent="OptionsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.5
+offset_top = -141.0
+offset_right = 137.5
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.795368, 0.715129, 0.313044, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_aovhh")
+theme_override_font_sizes/font_size = 24
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="OptionsPanel"]
+z_index = 10
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = 35.0
+offset_right = 35.5
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.713726, 0.313726, 1)
+theme_override_fonts/font = ExtResource("2_3otvd")
+theme_override_font_sizes/font_size = 30
+text = "Back"
 flat = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -319,5 +399,14 @@ mesh = SubResource("ArrayMesh_vp8qf")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_5nhha")
 
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0ib4f")
+volume_db = 2.0
+autoplay = true
+mix_target = 1
+parameters/looping = true
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="OptionsPanel/Back" to="." method="_on_back_pressed"]
