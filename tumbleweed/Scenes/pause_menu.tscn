@@ -25,10 +25,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -33.0
-offset_right = 48.0
-offset_bottom = 33.0
+offset_left = -124.5
+offset_top = -128.0
+offset_right = 124.5
+offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -38,6 +38,7 @@ size_flags_horizontal = 4
 
 [node name="Paused" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.795368, 0.715129, 0.313044, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_3uriu")
@@ -66,26 +67,30 @@ text = "Main Menu"
 [node name="Panel" type="Panel" parent="."]
 z_index = -1
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.499132
-anchor_top = 0.473765
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.529321
+anchor_bottom = 0.5
 offset_left = -143.0
-offset_top = -107.0
+offset_top = -117.0
 offset_right = 144.0
-offset_bottom = 128.0
+offset_bottom = 148.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="OptionsPanel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 875.0
-offset_top = 174.0
-offset_right = 1104.0
-offset_bottom = 494.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.515
+anchor_right = 0.5
+anchor_bottom = 0.515
+offset_left = 299.0
+offset_top = -159.72
+offset_right = 528.0
+offset_bottom = 160.28
 
 [node name="HSlider" type="HSlider" parent="OptionsPanel"]
 layout_mode = 0

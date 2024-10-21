@@ -24,3 +24,6 @@ To make Godot and Git work:
 5. Click Tumbleweed-Game -> Tumbleweed -> Select Current Folder
 6. You now have access to the files in the godot engine.
 7. You can now pull and push normally in the terminal
+
+## Documentation
+Decumentation for basic understanding of the game can be found at `https://docs.google.com/document/d/1T9JZcdjm0EsvstAAp6TbSQO7ZQUH9lXI5bbTOZVeFKc/edit?usp=sharing`
