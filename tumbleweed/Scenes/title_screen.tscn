@@ -259,11 +259,16 @@ text = "Quit"
 flat = true
 
 [node name="OptionsPanel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 875.0
-offset_top = 174.0
-offset_right = 1104.0
-offset_bottom = 494.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.515
+anchor_right = 0.5
+anchor_bottom = 0.515
+offset_left = 299.0
+offset_top = -159.72
+offset_right = 528.0
+offset_bottom = 160.28
 
 [node name="HSlider" type="HSlider" parent="OptionsPanel"]
 layout_mode = 0
