@@ -11,11 +11,13 @@ All you need to play Tumble is the "Export" folder. To access it,
 
 
 ## For Pros Only
-To make Godot and git work:
+These instructions operate under the assumption that you already have Godot installed on your device. If you don't but you still wish to follow these steps, you can download Godot for free on Steam.
+
+To make Godot and Git work:
 
 1. Go to documents folder (or where you keep your Godot projects) and open this in a terminal (right click and "open in terminal" for windows).
 2. git clone https://github.com/Trevonator8/Tumbleweed-Game.git
-3. Open gidot launcher.
+3. Open Godot launcher.
 4. Click "Import" (next to Create)
 5. Click Tumbleweed-Game -> Tumbleweed -> Select Current Folder
 6. You now have access to the files in the godot engine.
