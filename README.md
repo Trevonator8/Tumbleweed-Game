@@ -1,5 +1,16 @@
-This is the main implementation of the game. When we eventually submit our project, this will be the directory where we make the executable.
+# Tumble: The Official GitHub Reposirtory
+Welcome to Tumble!
+If all you are looking for is the playable game, then follow the instructions under the **Download Game** header. If you want the source code and documentation too, follow the instructions under the **For Pros Only** header.
 
+## Download Game
+#### Please note that Tumble is only playable on Windows machines right now.
+All you need to play Tumble is the "Export" folder. To access it,
+- Download that file, then open it to access its contents.
+- Double-click TumbleWeed.exe
+- If you get a pop-up saying "Windows protected your PC", press the "More info" link and a button will appear at the bottom of the window saying "Run anyway". Click the button, and Tumble should start up.
+
+
+## For Pros Only
 To make Godot and git work:
 
 1. Go to documents folder (or where you keep your Godot projects) and open this in a terminal (right click and "open in terminal" for windows).
