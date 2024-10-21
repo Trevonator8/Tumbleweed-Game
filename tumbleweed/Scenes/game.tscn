@@ -103,6 +103,7 @@ surface_material_override/0 = SubResource("ShaderMaterial_y56le")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -1152.0
