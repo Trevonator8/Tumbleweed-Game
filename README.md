@@ -5,9 +5,11 @@ If all you are looking for is the playable game, then follow the instructions un
 ## Download Game
 #### Please note that Tumble is only playable on Windows machines right now.
 All you need to play Tumble is the "Export" folder. To access it,
-1. Download that file, then open it to access its contents.
-2. Double-click TumbleWeed.exe
-3. If you get a pop-up saying "Windows protected your PC", press the "More info" link and a button will appear at the bottom of the window saying "Run anyway". Click the button, and Tumble should start up.
+1. Navigate to the `Export` folder above.
+2. Download `TumbleWeed.exe`, `TumbleWeed.console.exe`, and `TumbleWeed.pck`.
+3. Save these files into their own folder. Note that they MUST all be in the same folder.
+4. Double-click TumbleWeed.exe
+5. If you get a pop-up saying "Windows protected your PC", press the "More info" link and a button will appear at the bottom of the window saying "Run anyway". Click the button, and Tumble should start up.
 
 
 ## For Pros Only
