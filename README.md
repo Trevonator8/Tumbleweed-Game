@@ -5,9 +5,9 @@ If all you are looking for is the playable game, then follow the instructions un
 ## Download Game
 #### Please note that Tumble is only playable on Windows machines right now.
 All you need to play Tumble is the "Export" folder. To access it,
-- Download that file, then open it to access its contents.
-- Double-click TumbleWeed.exe
-- If you get a pop-up saying "Windows protected your PC", press the "More info" link and a button will appear at the bottom of the window saying "Run anyway". Click the button, and Tumble should start up.
+1. Download that file, then open it to access its contents.
+2. Double-click TumbleWeed.exe
+3. If you get a pop-up saying "Windows protected your PC", press the "More info" link and a button will appear at the bottom of the window saying "Run anyway". Click the button, and Tumble should start up.
 
 
 ## For Pros Only
@@ -15,8 +15,8 @@ These instructions operate under the assumption that you already have Godot inst
 
 To make Godot and Git work:
 
-1. Go to documents folder (or where you keep your Godot projects) and open this in a terminal (right click and "open in terminal" for windows).
-2. git clone https://github.com/Trevonator8/Tumbleweed-Game.git
+1. Go to documents folder (or where you keep your Godot projects) and open this in a terminal (right click and "open in terminal" for Windows).
+2. Type `git clone https://github.com/Trevonator8/Tumbleweed-Game.git`
 3. Open Godot launcher.
 4. Click "Import" (next to Create)
 5. Click Tumbleweed-Game -> Tumbleweed -> Select Current Folder
