@@ -1,4 +1,4 @@
-# Tumble: The Official GitHub Reposirtory
+# Tumble: The Official GitHub Repository
 Welcome to Tumble!
 If all you are looking for is the playable game, then follow the instructions under the **Download Game** header. If you want the source code and documentation too, follow the instructions under the **For Pros Only** header.
 
